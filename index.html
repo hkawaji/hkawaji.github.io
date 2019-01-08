@@ -64,6 +64,7 @@ title: Top
 
 <div>
 {% for tag in tags %}
+  <i class="fa fa-commenting-o"></i>
   <a href="#{{ tag | slugify }}" class="post-tag"> {{ tag }} </a>
 {% endfor %}
 </div>
