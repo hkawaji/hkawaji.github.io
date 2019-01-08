@@ -7,11 +7,7 @@ title: Top
 {% for post in paginator.posts %}
 
   <small>{{ post.date | date: "%-d %B %Y" }}</small>
-  <h3><a href="{{ post.url | absolute_url}}">{{ post.title }}</a>
-  <span class="content">
-    {{ post.content | strip_html  | truncate: 30 }}
-  </span>
-  </h3>
+  <h3><a href="{{ post.url | absolute_url}}">{{ post.title }}</a> </h3>
   <hr>
 
 {% endfor %}
@@ -74,16 +70,13 @@ title: Top
 
 {% for tag in tags %}
   <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
-  <ul>
-   {% for post in site.posts %}
-     {% if post.tags contains tag %}
-     <li>
-     <a href="{{ post.url }}">
-     {{ post.title }}
-     <small>{{ post.date | date_to_string }}</small>
-     </a>
-     </li>
-     {% endif %}
-   {% endfor %}
-  </ul>
+  {% for post in site.posts %}
+    {% if post.tags contains tag %}
+
+     <small>{{ post.date | date: "%-d %B %Y" }}</small>
+     <h4><a href="{{ post.url | absolute_url}}">{{ post.title }}</a> </h4>
+     <hr>
+
+    {% endif %}
+  {% endfor %}
 {% endfor %}
