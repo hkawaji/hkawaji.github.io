@@ -5,6 +5,7 @@ title: Top
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 <h1> Latest posts </h1>
+<hr>
 {% for post in paginator.posts %}
 
   <small>{{ post.date | date: "%-d %B %Y" }}</small>
@@ -39,10 +40,9 @@ title: Top
 </div>
 {% endif %}
 
-<hr>
-
 
 <h1> Tagged posts </h1>
+<hr>
 {% assign rawtags = "" %}
 {% for post in site.posts %}
   {% assign ttags = post.tags | join:'|' | append:'|' %}
@@ -62,11 +62,9 @@ title: Top
   {% endif %}
 {% endfor %}
 
-<div>
 {% for tag in tags %}
-  <a href="#{{ tag | slugify }}" class="post-tag"> <i class="fas fa-tags"></i> {{ tag }} </a>
+  <h4><a href="#{{ tag | slugify }}" class="post-tag"> <i class="fas fa-tags"></i> {{ tag }} </a><h4>
 {% endfor %}
-</div>
 
 {% for tag in tags %}
   <div id="{{ tag | slugify }}">{{ tag }}</div>
