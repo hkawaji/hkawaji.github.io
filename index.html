@@ -8,8 +8,10 @@ title: Top
 <hr>
 {% for post in paginator.posts %}
 
-  <h3><a href="{{ post.url | absolute_url}}">{{ post.title }}</a> </h3>
-  <small>{{ post.date | date: "%-d %B %Y" }}</small>
+  <h3>
+    <a href="{{ post.url | absolute_url}}">{{ post.title }}</a>
+    <small>{{ post.date | date: "%-d %B %Y" }}</small>
+  </h3>
 
 {% endfor %}
 
