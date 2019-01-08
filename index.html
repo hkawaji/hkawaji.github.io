@@ -76,7 +76,7 @@ title: Top
   {% for post in site.posts %}
     {% if post.tags contains tag %}
 
-     <li> {{ post.date | date: "%-d %B %Y" }} <a href="{{ post.url | absolute_url}}">{{ post.title }}</a> 
+     <li> <a href="{{ post.url | absolute_url}}">{{ post.title }}</a> <small>{{ post.date | date: "%-d %B %Y" }} </small>
 
     {% endif %}
   {% endfor %}
