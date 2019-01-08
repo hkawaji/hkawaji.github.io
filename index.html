@@ -65,13 +65,12 @@ title: Top
 
 <div>
 {% for tag in tags %}
-  <i class="fa fa-commenting-o"></i>
-  <a href="#{{ tag | slugify }}" class="post-tag"> {{ tag }} </a>
+  <a href="#{{ tag | slugify }}" class="post-tag"> <i class="fal fa-tags"></i> {{ tag }} </a>
 {% endfor %}
 </div>
 
 {% for tag in tags %}
-  <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
+  <div id="{{ tag | slugify }}">{{ tag }}</div>
   <ul>
   {% for post in site.posts %}
     {% if post.tags contains tag %}
