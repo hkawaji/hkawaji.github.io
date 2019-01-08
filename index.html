@@ -62,9 +62,11 @@ title: Top
   {% endif %}
 {% endfor %}
 
+<h4>
 {% for tag in tags %}
-  <h4><a href="#{{ tag | slugify }}" class="post-tag"> <i class="fas fa-tags"></i> {{ tag }} </a><h4>
+  <a href="#{{ tag | slugify }}" class="post-tag"> <i class="fas fa-tags"></i> {{ tag }} </a>
 {% endfor %}
+</h4>
 
 {% for tag in tags %}
   <div id="{{ tag | slugify }}">{{ tag }}</div>
