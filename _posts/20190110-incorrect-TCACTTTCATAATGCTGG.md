@@ -6,7 +6,7 @@ tag: [japanese]
 
 核酸医薬ヌシネルセンが相補鎖を構成し得る核酸を、ヒトゲノム塩基配列の中から検索することを試みます。
 
-*** 本稿の bowtie_queryEditの部分には誤りがあります。[訂正版](https://hkawaji.github.io/2019/01/10/TCACTTTCATAATGCTGG.html)をご覧ください。***
+***本稿の bowtie_queryEditの部分には誤りがあります。[訂正版](https://hkawaji.github.io/2019/01/10/TCACTTTCATAATGCTGG.html)をご覧ください。***
 
 但し書き:
 
